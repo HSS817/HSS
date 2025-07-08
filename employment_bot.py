@@ -45,9 +45,7 @@ async def job_selection(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     job_name = query.data.split("_", 1)[1]
     description = JOBS.get(job_name, "Brak opisu / No description available.")
-    await query.edit_message_text(text=f"📄 {job_name}
-
-{description}")
+    await query.edit_message_text(text=f"📄 {job_name}{description}")
 
 # Contact recruiter handler
 async def contact_recruiter(update: Update, context: ContextTypes.DEFAULT_TYPE):
