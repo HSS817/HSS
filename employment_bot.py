@@ -51,8 +51,7 @@ async def job_selection(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def contact_recruiter(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    await query.edit_message_text("✍️ Napisz wiadomość, którą chcesz wysłać rekruterowi.
-Write a message to send to the recruiter.")
+    await query.edit_message_text("✍️ Napisz wiadomość, którą chcesz wysłać rekruterowi. / Write a message to send to the recruiter.")
     context.user_data["awaiting_message"] = True
 
 # Message handler for user messages
