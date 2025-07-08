@@ -5,7 +5,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 
 # Replace with your actual bot token and recruiter group chat ID
-BOT_TOKEN = "7987372609:AAFKLWiauSRE9s7OlvYwQnVmEFLDxWwWxqM"
+BOT_TOKEN = "7854578272:AAHLD2HJOG5lEudsdgXqcV40BEdI4evXm1s"
 RECRUITER_GROUP_ID = -1002824178936
 
 # Supported languages
