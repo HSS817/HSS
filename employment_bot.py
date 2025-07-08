@@ -1,5 +1,6 @@
-import os
+
 import json
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 
@@ -44,7 +45,7 @@ async def job_selection(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     job_name = query.data.split("_", 1)[1]
     description = JOBS.get(job_name, "Brak opisu / No description available.")
-    await query.edit_message_text(f"📄 {job_name}
+    await query.edit_message_text(text=f"📄 {job_name}
 
 {description}")
 
@@ -79,7 +80,6 @@ Your message has been sent to the recruiter.")
 
 # Main application setup
 def main():
-    # Only run polling if on Render or explicitly allowed
     if os.environ.get("RENDER", "true").lower() == "true":
         app = ApplicationBuilder().token(BOT_TOKEN).build()
         app.add_handler(CommandHandler("start", start))
