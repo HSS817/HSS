@@ -39,9 +39,7 @@ async def job_selection(update: Update, context: ContextTypes.DEFAULT_TYPE):
     description = JOBS.get(job_name, "Brak opisu / No description available.")
 
     keyboard = [[InlineKeyboardButton("⬅️ Назад к списку вакансий", callback_data="back_to_jobs")]]
-    await query.edit_message_text(f"📄 {job_name}
-
-{description}", reply_markup=InlineKeyboardMarkup(keyboard))
+    await query.edit_message_text(f"📄 {job_name}{description}", reply_markup=InlineKeyboardMarkup(keyboard))
 
 async def back_to_jobs(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
