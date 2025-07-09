@@ -3,7 +3,7 @@ import json
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 
-BOT_TOKEN = "7987372609:AAFKLWiauSRE9s7OlvYwQnVmEFLDxWwWxqM"
+BOT_TOKEN = "7854578272:AAHLD2HJOG5lEudsdgXqcV40BEdI4evXm1s"
 RECRUITER_GROUP_ID = -1002824178936
 
 LANGUAGES = {
