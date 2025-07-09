@@ -13,7 +13,7 @@ LANGUAGES = {
     "en": "English 🇬🇧"
 }
 
-with open("jobs (5).json", "r", encoding="utf-8") as f:
+with open("jobs.json", "r", encoding="utf-8") as f:
     JOBS = json.load(f)
 
 user_languages = {}
