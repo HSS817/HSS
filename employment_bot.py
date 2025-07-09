@@ -63,14 +63,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(RECRUITER_GROUP_ID, f"📨 Wiadomość od @{user.username or user.id}:{message_text}")
         await update.message.reply_text("✅ Wiadomość została wysłana do rekrutera. / Your message has been sent to the recruiter.")
     elif update.message.chat.id == RECRUITER_GROUP_ID and update.message.reply_to_message:
-        lines = update.message.reply_to_message.text.split("
-")
+        lines = update.message.reply_to_message.text.split("")
         if lines and "@" in lines[0]:
             user_identifier = lines[0].split("@")[1].split(":")[0]
             try:
                 user_id = int(user_identifier)
-                await context.bot.send_message(user_id, f"📬 Odpowiedź od rekrutera:
-{update.message.text}")
+                await context.bot.send_message(user_id, f"📬 Odpowiedź od rekrutera:{update.message.text}")
             except:
                 pass
 
