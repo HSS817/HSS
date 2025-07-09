@@ -60,10 +60,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         context.user_data["awaiting_message"] = False
         user = update.message.from_user
         message_text = update.message.text
-        await context.bot.send_message(RECRUITER_GROUP_ID, f"📨 Wiadomość od @{user.username or user.id}:
-{message_text}")
-        await update.message.reply_text("✅ Wiadomość została wysłana do rekrutera.
-Your message has been sent to the recruiter.")
+        await context.bot.send_message(RECRUITER_GROUP_ID, f"📨 Wiadomość od @{user.username or user.id}:{message_text}")
+        await update.message.reply_text("✅ Wiadomość została wysłana do rekrutera. / Your message has been sent to the recruiter.")
     elif update.message.chat.id == RECRUITER_GROUP_ID and update.message.reply_to_message:
         lines = update.message.reply_to_message.text.split("
 ")
